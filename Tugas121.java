@@ -9,17 +9,17 @@ public class Tugas121 {
         if (n < 1) {
             System.out.println("n minimal 1.");
         } else {
-            int total = 0;                       // penampung total angka tercetak
+            int total = 0;                       
 
-            for (int i = 1; i <= n; i++) {       // outer loop: baris
-                for (int j = 1; j <= i; j++) {   // inner loop: angka 1 sampai i
+            for (int i = 1; i <= n; i++) {       
+                for (int j = 1; j <= i; j++) {   
                     if (j > 1) {
-                        System.out.print(" ");   // spasi pemisah antar angka
+                        System.out.print(" ");   
                     }
                     System.out.print(j);
-                    total++;                     // hitung setiap angka yang dicetak
+                    total++;                     
                 }
-                System.out.println();            // pindah baris
+                System.out.println();            
             }
             System.out.println("Total angka tercetak: " + total);
         }
