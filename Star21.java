@@ -1,21 +1,15 @@
 import java.util.Scanner;
 
 public class Star21 {
-    public static void main(String [] args){
-
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan jumlah baris :");
-        int baris = sc.nextInt();
+        System.out.print("Masukkan nilai n = ");
+        int n = sc.nextInt();
 
-        System.out.print("Masukkan jumlah kolom: ");
-        int kolom = sc.nextInt();
-
-        for (int i = 1; i <= baris ; i++) {
-            for (int j = 1; j <= kolom ; j++) {
-                System.out.print("*");
-            }
-            System.out.println ();
+        for (int i = 1; i <= n; i++) {
+            System.out.print("*");
         }
+        System.out.println();
         sc.close();
     }
 }
