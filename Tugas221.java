@@ -3,24 +3,25 @@ import java.util.Scanner;
 public class Tugas221 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan nilai n = ");
-        int n = sc.nextInt();
-
-        if (n < 3) {
-            System.out.println("n minimal 3.");
-        } else {
-            int jumlah = 0;                      // penampung jumlah seluruh angka
-
-            for (int i = 1; i <= n; i++) {       // outer loop: nomor baris
-                for (int j = 1; j <= n; j++) {   // inner loop: nomor kolom
-                    int hasil = i * j;
-                    System.out.printf("%4d", hasil);   // lebar 4 karakter, rata kanan
-                    jumlah += hasil;
-                }
-                System.out.println();            // pindah baris
+        int n;
+        do {
+            System.out.print("Masukkan nilai n = ");
+            n = sc.nextInt();
+            if (n < 3) {
+                System.out.println("n minimal 3. Ulangi input!");
             }
-            System.out.println("Jumlah seluruh angka: " + jumlah);
+        } while (n < 3);
+
+        int jumlah = 0;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                int hasil = i * j;
+                System.out.printf("%4d", hasil);
+                jumlah += hasil;
+            }
+            System.out.println();
         }
+        System.out.println("Jumlah seluruh angka: " + jumlah);
         sc.close();
     }
 }
